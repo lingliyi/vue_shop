@@ -6,6 +6,8 @@ import './plugins/element.js'
 import './assets/fonts/iconfont.css'
 //导入全局样式
 import './assets/css/gloabl.css'
+// 安装插件
+import TreeTable from 'vue-table-with-tree-grid'
 
 import axios from 'axios'
 //配置请求的根路径
@@ -15,7 +17,7 @@ axios.interceptors.request.use(config => {
   return config
 })
 Vue.prototype.$http = axios
-
+Vue.component('tree-table', TreeTable)
 Vue.config.productionTip = false
 
 new Vue({
@@ -25,6 +27,9 @@ new Vue({
 
 //连续点击多次路由报错解决方法
 import Router from 'vue-router'
+import {
+  Tree
+} from 'element-ui'
 
 const originalPush = Router.prototype.push
 Router.prototype.push = function push(location) {

@@ -8,6 +8,11 @@ body,
     padding: 0;
 }
 
+
 .el-breadcrumb {
     margin-bottom: 20px;
+}
+
+.el-cascader-menu {
+    height: 300px;
 }
