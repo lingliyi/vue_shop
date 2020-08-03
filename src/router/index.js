@@ -7,24 +7,49 @@ import Users from '../components/user/Users.vue'
 import Rights from '../components/power/Rights.vue'
 import Roles from '../components/power/Roles.vue'
 import Cate from '../components/goods/Cate.vue'
+import Params from '../components/goods/Params.vue'
 
 Vue.use(VueRouter)
 
 const router = new VueRouter({
   routes: [
     //路由重定向
-    { path: '/', redirect: '/login' },
-    { path: '/login', component: Login },
+    {
+      path: '/',
+      redirect: '/login'
+    },
+    {
+      path: '/login',
+      component: Login
+    },
     {
       path: '/home',
       component: Home,
       redirect: '/welcome',
-      children: [
-        { path: '/welcome', component: Welcome },
-        { path: '/users', component: Users },
-        { path: '/rights', component: Rights },
-        { path: '/roles', component: Roles },
-        { path: '/categories', component: Cate }
+      children: [{
+          path: '/welcome',
+          component: Welcome
+        },
+        {
+          path: '/users',
+          component: Users
+        },
+        {
+          path: '/rights',
+          component: Rights
+        },
+        {
+          path: '/roles',
+          component: Roles
+        },
+        {
+          path: '/categories',
+          component: Cate
+        },
+        {
+          path: '/params',
+          component: Params
+        }
       ]
     }
   ]
