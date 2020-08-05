@@ -16,3 +16,19 @@ body,
 .el-cascader-menu {
     height: 300px;
 }
+
+.el-steps {
+    margin: 10px 0;
+}
+
+.el-step__title {
+    font-size: 13px;
+}
+
+.ql-editor {
+    min-height: 300px;
+}
+
+.addbtn {
+    margin-top: 15px;
+}
